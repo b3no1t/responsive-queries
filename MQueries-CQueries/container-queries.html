@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Container Queries - Carte Adaptative</title>
+ <link rel="stylesheet" href="./assets/css/reset.css" type="text/css">
+ <link rel="stylesheet" href="./assets/css/container.css" type="text/css">
+ <link rel="stylesheet" href="./assets/css/adaptative-card.css" type="text/css">
+ <link rel="stylesheet" href="./assets/css/full-strategy.css" type="text/css">
+</head>
+<body>
+ <h1>Partie 2 : Les Container Queries - L'Approche Moderne</h1>
+
+  <main class="main-content">
+    
+  <div class="card-container">
+      
+    <article class="adaptive-card">
+        <img src="http://unsplash.it/g/600/400?random&blur&gravity=center" class="adaptive-card__image" alt="Produit">
+        <div class="adaptive-card__content">
+          <h3 class="adaptive-card__title">Titre du produit</h3>
+          <p class="adaptive-card__description">Description détaillée...</p>
+          <div class="adaptive-card__metadata">
+            <span>Prix : 29€</span>
+            <span>En stock</span>
+          </div>
+        </div>
+    </article>
+
+    </div>
+
+  </main>
+
+  <!-- 
+  !Exemple 2 : Dans une sidebar étroite
+  Le conteneur fait environ 300px
+  La carte utilisera le style de base (vertical)
+  MÊME SI nous sommes sur un écran desktop de 1920px !
+  -->
+  <aside class="sidebar">
+    <div class="card-container">
+      <article class="adaptive-card">
+        <img src="http://unsplash.it/g/600/400?random&blur&gravity=center" class="adaptive-card__image" alt="Produit">
+        <div class="adaptive-card__content">
+          <h3 class="adaptive-card__title">Titre du produit</h3>
+          <p class="adaptive-card__description">Description...</p>
+        </div>
+      </article>
+    </div>
+  </aside>
+
+
+</body>
+</html>

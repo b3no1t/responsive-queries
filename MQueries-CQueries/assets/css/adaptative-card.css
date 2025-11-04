@@ -1,0 +1,162 @@
+/* 
+ÉTAPE 1 : Définir le conteneur
+C'est LA nouveauté : on déclare quel élément servira de référence
+*/
+.card-container {
+  /* 
+  container-type définit le type de surveillance
+  inline-size = surveiller la largeur du conteneur
+  (inline-size car on surveille l'axe horizontal)
+  */
+  container-type: inline-size;
+  
+  /* 
+  container-name donne un nom au conteneur
+  Permet de cibler spécifiquement ce conteneur dans les queries
+  Optionnel mais recommandé pour la clarté
+  */
+  container-name: card-wrapper;
+}
+
+/* 
+ÉTAPE 2 : Styles de base du composant
+Ces styles s'appliquent TOUJOURS, quelle que soit la taille
+*/
+.adaptive-card {
+  /* Padding confortable */
+  padding: 16px;
+  
+  /* Bordure et coins arrondis */
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  
+  /* Couleur de fond */
+  background: white;
+  
+  /* 
+  Par défaut, disposition verticale (colonne)
+  Image au-dessus, texte en dessous
+  */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.adaptive-card__image {
+  /* Image responsive par défaut */
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.adaptive-card__title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.adaptive-card__description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* 
+ÉTAPE 3 : Container Query pour taille moyenne
+@container = "si le conteneur parent répond à cette condition"
+(min-width: 400px) = "si le conteneur fait au moins 400px"
+*/
+@container card-wrapper (min-width: 400px) {
+  /* 
+  Quand le conteneur dépasse 400px, on passe en disposition horizontale
+  L'image à gauche, le contenu à droite
+  */
+  .adaptive-card {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  /* 
+  L'image occupe maintenant 40% de la largeur
+  Et non plus 100% comme en version verticale
+  */
+  .adaptive-card__image {
+    width: 40%;
+    height: 200px;
+    /* 
+    flex-shrink: 0 empêche l'image de rétrécir
+    si le texte est long
+    */
+    flex-shrink: 0;
+  }
+  
+  /* Le contenu occupe l'espace restant */
+  .adaptive-card__content {
+    flex: 1;
+  }
+  
+  /* Texte plus grand avec plus d'espace */
+  .adaptive-card__title {
+    font-size: 18px;
+  }
+  
+  .adaptive-card__description {
+    font-size: 15px;
+  }
+}
+
+/* 
+ÉTAPE 4 : Container Query pour grande taille
+Quand le conteneur dépasse 600px
+*/
+@container card-wrapper (min-width: 600px) {
+  .adaptive-card {
+    /* Padding plus généreux */
+    padding: 24px;
+  }
+  
+  /* Image encore plus grande */
+  .adaptive-card__image {
+    width: 45%;
+    height: 250px;
+  }
+  
+  /* Typographie optimisée pour grand espace */
+  .adaptive-card__title {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  
+  .adaptive-card__description {
+    font-size: 16px;
+  }
+  
+  /* 
+  On peut ajouter des éléments qui n'apparaissent
+  que quand il y a assez d'espace
+  */
+  .adaptive-card__metadata {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #888;
+  }
+}
+
+/* 
+ÉTAPE 5 : Combiner container queries et unités de conteneur
+cqw = Container Query Width (largeur du conteneur en %)
+1cqw = 1% de la largeur du conteneur
+*/
+@container card-wrapper (min-width: 500px) {
+  .adaptive-card__title {
+    /* 
+    La taille de police s'adapte fluidement
+    entre 18px et 24px selon la largeur du conteneur
+    clamp(min, préféré, max)
+    */
+    font-size: clamp(18px, 4cqw, 24px);
+  }
+}

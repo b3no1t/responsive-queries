@@ -1,0 +1,197 @@
+/* 
+  ═══════════════════════════════════════════════════
+  ÉTAPE 1 : STYLES DE BASE - MOBILE FIRST
+  On commence par les petits écrans (approche Mobile First)
+  Ces styles s'appliquent à TOUS les écrans par défaut
+  ═══════════════════════════════════════════════════
+*/
+    .product-card {
+      /* Sur mobile, une seule carte par ligne = 100% */
+      width: 100%;
+      
+      /* Espacement interne : 16px */
+      padding: 16px;
+      
+      /* Bordure discrète pour délimiter visuellement */
+      border: 1px solid #e0e0e0;
+      
+      /* Coins arrondis*/
+      border-radius: 8px;
+      
+      /* Ombre subtile pour effet de profondeur (élévation) */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      
+      /* Fond blanc pour contraste avec le fond gris de la page */
+      background-color: white;
+      
+      /* Transition pour animations fluides (utilisée dans hover) */
+      transition: all 0.3s ease;
+    }
+
+    .product-card__image {
+      /* Image occupe toute la largeur de la carte */
+      width: 100%;
+      
+      /* Hauteur fixe pour uniformité visuelle entre toutes les cartes */
+      height: 200px;
+      
+      /* 
+        object-fit: cover
+        L'image remplit l'espace sans déformation
+        Elle sera recadrée si nécessaire pour conserver ses proportions
+      */
+      object-fit: cover;
+      
+      /* Arrondi en haut uniquement pour suivre la forme de la carte */
+      border-radius: 8px 8px 0 0;
+      
+      /* Bloc pour éviter les espaces blancs sous l'image */
+      display: block;
+    }
+
+    .product-card__content {
+      /* Espacement entre l'image et le texte */
+      margin-top: 12px;
+    }
+
+    .product-card__title {
+      /* Taille lisible sur mobile (18px minimum recommandé) */
+      font-size: 18px;
+      
+      /* Espacement sous le titre */
+      margin-bottom: 8px;
+      
+      /* Texte en gras pour hiérarchie visuelle */
+      font-weight: 600;
+      
+      /* Couleur sombre mais pas noire pure (meilleur pour les yeux) */
+      color: #333;
+    }
+    
+    .product-card__description {
+      /* Texte de description plus petit que le titre */
+      font-size: 14px;
+      
+      /* Couleur grise pour différencier du titre */
+      color: #666;
+      
+      /* Espacement sous la description */
+      margin-bottom: 12px;
+      
+      /* Hauteur de ligne généreuse pour faciliter la lecture */
+      line-height: 1.5;
+    }
+    
+    .product-card__price {
+      /* Taille importante car info clé */
+      font-size: 20px;
+      
+      /* Gras pour attirer l'attention */
+      font-weight: 700;
+      
+      /* Couleur distinctive pour le prix */
+      color: #2196F3;
+    }
+
+    /* 
+      ═══════════════════════════════════════════════════
+      ÉTAPE 2 : TABLETTES (≥ 768px)
+      @media = condition qui s'active quand elle est vraie
+      min-width: 768px = "SI la largeur est AU MOINS 768px"
+      Ces styles REMPLACENT ou COMPLÈTENT les styles de base
+      ═══════════════════════════════════════════════════
+    */
+    @media (min-width: 768px) {
+      .product-card {
+        /* 
+          calc() permet des calculs dynamiques
+          50% - 10px = deux cartes côte à côte avec espacement
+          Le gap de 20px du conteneur crée 20px entre les 2 cartes
+          Donc chaque carte perd 10px de chaque côté (20px / 2)
+        */
+        width: calc(50% - 10px);
+      }
+      
+      /* Image plus haute car plus d'espace disponible */
+      .product-card__image {
+        height: 250px;
+      }
+      
+      /* Titre légèrement plus grand */
+      .product-card__title {
+        font-size: 20px;
+      }
+      
+      /* Description aussi légèrement plus grande */
+      .product-card__description {
+        font-size: 15px;
+      }
+    }
+
+    /* 
+      ═══════════════════════════════════════════════════
+      ÉTAPE 3 : DESKTOP (≥ 1024px)
+      Pour les grands écrans d'ordinateur
+      Ces styles sont encore plus spécifiques
+      ═══════════════════════════════════════════════════
+    */
+    @media (min-width: 1024px) {
+      .product-card {
+        /* 
+          Trois cartes côte à côte 🎯
+          33.333% = un tiers de la largeur
+          - 13.33px pour compenser le gap (20px / 3 cartes ≈ 13.33px)
+        */
+        width: calc(33.333% - 13.33px);
+      }
+      
+      /* Image encore plus grande sur desktop */
+      .product-card__image {
+        height: 300px;
+      }
+      
+      /* Typographie au maximum de confort */
+      .product-card__title {
+        font-size: 22px;
+      }
+      
+      .product-card__description {
+        font-size: 16px;
+      }
+      
+      /* 
+        EFFET HOVER 🖱️
+        Uniquement sur desktop car le "survol" n'existe pas sur tactile
+        Améliore l'expérience utilisateur et l'interactivité
+      */
+      .product-card:hover {
+        /* Ombre plus prononcée pour effet de "levée" */
+        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        
+        /* Déplace la carte de 4px vers le haut */
+        transform: translateY(-4px);
+        
+        /* Bordure colorée au survol pour feedback visuel */
+        border-color: #2196F3;
+      }
+    }
+    /* 
+      ═══════════════════════════════════════════════════
+      ÉTAPE 4 : ORIENTATION PAYSAGE SUR TABLETTE
+      Combine deux conditions avec AND
+      ═══════════════════════════════════════════════════
+    */
+    @media (orientation: landscape) and (max-width: 1023px) {
+      /* 
+        En mode paysage (tablette horizontale), on a plus de largeur
+        On peut donc afficher 3 cartes même si < 1024px
+      */
+      .product-card {
+        width: calc(33.333% - 13.33px);
+      }
+      
+      .product-card__image {
+        height: 220px;
+      }
+    }
+  

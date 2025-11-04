@@ -1,0 +1,34 @@
+ /* 
+ ═══════════════════════════════════════════════════
+  CONTENEUR PRINCIPAL
+  Utilise Flexbox pour une disposition flexible
+ ═══════════════════════════════════════════════════
+ */
+ .products-container {
+  /* 
+   Flexbox permet d'aligner les cartes côte à côte
+   et de les faire passer à la ligne automatiquement
+ */
+  display: flex;
+
+  /* Les éléments passent à la ligne si pas assez d'espace */
+  flex-wrap: wrap;
+
+  /* Espacement horizontal entre les cartes (gap moderne) */
+  gap: 20px;
+
+  /* Limite la largeur sur très grands écrans */
+  max-width: 1400px;
+
+  /* Centre le conteneur */
+  margin: 0 auto;
+ }
+
+ .wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+    flex-wrap: wrap;
+  flex-direction: column;
+ }

@@ -1,0 +1,46 @@
+/* 
+STRATÉGIE HYBRIDE COMPLÈTE
+Utiliser les deux pour un résultat optimal
+*/
+
+/* 1 Media Query pour le layout global */
+
+@media (min-width: 1024px) {
+
+  .page-layout {
+    /* Grille à 2 colonnes sur desktop */
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 32px;
+  }
+  
+  .sidebar {
+    /* Sidebar fixe de 300px */
+    width: 300px;
+  }
+  
+  .main-content {
+    /* Contenu principal prend l'espace restant */
+    flex: 1;
+  }
+
+}
+
+/* 2 Container Query pour les composants */
+
+.card-container {
+ /* documentation : https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/container-type */
+  container-type: inline-size;
+}
+
+@container (min-width: 400px) {
+  /* 
+  Peu importe si cette carte est dans :
+  - La sidebar (300px) → reste vertical ❌
+  - Le contenu principal (700px) → passe horizontal ✅
+  Le composant décide selon SON espace !
+  */
+  .adaptive-card {
+    flex-direction: row;
+  }
+}

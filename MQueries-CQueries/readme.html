@@ -1,0 +1,555 @@
+<!DOCTYPE html><html><head>
+      <title>readme</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\lepag\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.19\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="les-media-queries-et-container-queries--maîtriser-le-responsive-design-moderne">Les Media Queries et Container Queries : Maîtriser le Responsive Design Moderne </h1>
+<h2 id="-lexique-des-termes-essentiels">📚 Lexique des Termes Essentiels </h2>
+<p><strong>Media Query</strong><br>
+Règle CSS permettant d'appliquer des styles en fonction des caractéristiques du <em>dispositif</em> (viewport, orientation, résolution).<br>
+<strong>C'est une question posée au navigateur : "Quelle est la taille de l'écran ?"</strong></p>
+<p><strong>Container Query</strong><br>
+Règle CSS permettant d'appliquer des styles en fonction des dimensions d'un <em>élément conteneur parent</em> spécifique, plutôt que de l'écran entier.<br>
+<strong>On demande : "Quelle est la taille de mon conteneur ?"</strong></p>
+<p><strong>Viewport</strong><br>
+Zone visible de la page web dans le navigateur. Sa taille varie selon l'appareil (mobile, tablette, desktop).</p>
+<p><strong>Breakpoint</strong><br>
+Point de rupture : seuil de largeur où le design change<br>
+(ex : passage de mobile à tablette à 768px).</p>
+<p><strong>Container</strong><br>
+Élément HTML défini comme contexte de référence pour les container queries.<br>
+<em>Il devient le point de mesure pour ses enfants.</em></p>
+<p><strong>Responsive Design</strong><br>
+Approche de conception où l'interface s'adapte automatiquement aux différentes tailles d'écran.<br>
+Tel de l'eau qui s'adapterai selon différents récipients.</p>
+<p><a href="#progressive-enhancement-et-responsive-design--le-lien-intrins%C3%A8que"><strong>Progressive Enhancement</strong></a><br>
+Philosophie de développement web consistant à construire une expérience de base fonctionnelle pour tous les utilisateurs, puis à ajouter progressivement des couches d'amélioration pour les navigateurs et appareils plus capables.<br>
+On part du <em>minimum viable</em> et <em>on enrichit l'expérience</em></p>
+<p><strong>Mobile-First</strong><br>
+Approche de conception commençant par l'expérience mobile (la plus contrainte), puis enrichissant pour les écrans plus grands. C'est une application concrète du <strong>Progressive Enhancement</strong> dans le responsive design.</p>
+<hr>
+<h2 id="comprendre-la-différence-fondamentale">Comprendre la Différence Fondamentale </h2>
+<p>Imaginez que vous construisez des meubles modulables :</p>
+<p><strong>Media Queries</strong> = Adapter les meubles selon la <em>taille de la pièce</em><br>
+Vous réorganisez tout votre salon différemment selon que vous êtes dans un studio ou une grande maison.</p>
+<p><strong>Container Queries</strong> = Adapter les meubles selon <em>l'espace disponible dans le meuble lui-même</em><br>
+Votre étagère modulable réorganise ses compartiments selon sa propre largeur, peu importe la taille de la pièce.</p>
+<hr>
+<h2 id="documentation-officielle">Documentation Officielle </h2>
+<p>🔗 <strong>Media Queries</strong> : <a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries">MDN Web Docs - Media Queries</a></p>
+<p>🔗 <strong>Container Queries</strong> : <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries">MDN Web Docs - Container Queries</a></p>
+<p>🔗 <strong>Guide Complet Responsive</strong> : <a href="https://web.dev/responsive-web-design-basics/">web.dev - Responsive Design</a></p>
+<p>🔗 <strong>Media Queries sur Alsacreation</strong> : <a href="https://www.alsacreations.com/article/lire/930-css3-media-queries.html">Les Media Queries CSS3</a></p>
+<p>🔗 <strong>Les Container Queries en CSS sur Alsacreation</strong> : <a href="https://www.alsacreations.com/article/lire/1915-Les-Container-Queries-en-CSS.html">Les Container Queries en CSS</a></p>
+<hr>
+<h2 id="partie-1--les-media-queries---lapproche-classique">Partie 1 : Les Media Queries - L'Approche Classique </h2>
+<h3 id="le-principe-de-base">Le Principe de Base </h3>
+<p>Les media queries interrogent les caractéristiques du <strong>dispositif d'affichage global</strong>, l'écran du navigateur.<br>
+Elles permettent de créer des points de rupture où votre design entier se réorganise.</p>
+<h3 id="exemple-commenté---carte-de-produit-responsive">Exemple Commenté - Carte de Produit Responsive </h3>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code><span class="token comment">/* 
+ÉTAPE 1 : Styles de base (Mobile First)
+On commence par définir les styles pour les petits écrans
+Cette approche est appelée "Mobile First" car on part du plus petit écran
+*/</span>
+<span class="token selector"><span class="token class">.product-card</span></span> <span class="token punctuation">{</span>
+  <span class="token comment">/* La carte occupe toute la largeur disponible sur mobile */</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token unit">%</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">/* Espacement interne confortable pour le tactile */</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">16</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">/* Bordure légère pour délimiter la carte */</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token unit">px</span> solid <span class="token hexcode color">#e0e0e0</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">/* Coins arrondis pour un aspect moderne */</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">8</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">/* Ombre subtile pour donner de la profondeur */</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">2</span><span class="token unit">px</span> <span class="token number">4</span><span class="token unit">px</span> <span class="token color"><span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0.1</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.product-card__image</span></span> <span class="token punctuation">{</span>
+  <span class="token comment">/* L'image prend toute la largeur sur mobile */</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token unit">%</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">/* Hauteur fixe pour maintenir la cohérence visuelle */</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">/* L'image couvre tout l'espace sans déformation */</span>
+  <span class="token property">object-fit</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span>
+  
+  <span class="token comment">/* Arrondi uniquement en haut pour suivre la carte */</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">8</span><span class="token unit">px</span> <span class="token number">8</span><span class="token unit">px</span> <span class="token number">0</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.product-card__content</span></span> <span class="token punctuation">{</span>
+  <span class="token comment">/* Espacement entre l'image et le contenu */</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">12</span><span class="token unit">px</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.product-card__title</span></span> <span class="token punctuation">{</span>
+  <span class="token comment">/* Taille de police lisible sur mobile */</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">18</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">/* Espacement en bas du titre */</span>
+  <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">8</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">/* Poids de police pour hiérarchie visuelle */</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">600</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 
+ÉTAPE 2 : Adaptation pour Tablettes (≥ 768px)
+@media = "si la condition suivante est vraie"
+min-width: 768px = "largeur minimale de 768 pixels"
+Donc : "Si l'écran fait AU MOINS 768px de large"
+*/</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> <span class="token number">768</span><span class="token unit">px</span><span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token comment">/* 
+  Sur tablette, on peut afficher 2 cartes côte à côte
+  calc() permet de calculer dynamiquement la largeur
+  50% de la largeur - 16px d'espacement entre les cartes
+  */</span>
+  <span class="token selector"><span class="token class">.product-card</span></span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token number">50</span><span class="token unit">%</span> <span class="token operator">-</span> <span class="token number">16</span><span class="token unit">px</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment">/* Image légèrement plus haute sur tablette */</span>
+  <span class="token selector"><span class="token class">.product-card__image</span></span> <span class="token punctuation">{</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">250</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment">/* Titre plus grand car plus d'espace disponible */</span>
+  <span class="token selector"><span class="token class">.product-card__title</span></span> <span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">20</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 
+ÉTAPE 3 : Adaptation pour Desktop (≥ 1024px)
+Même logique mais pour les grands écrans
+*/</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> <span class="token number">1024</span><span class="token unit">px</span><span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token comment">/* 
+  Sur desktop, 3 cartes côte à côte
+  33.333% = un tiers de la largeur
+  Moins 24px pour les espacements entre 3 éléments
+  */</span>
+  <span class="token selector"><span class="token class">.product-card</span></span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token number">33.333</span><span class="token unit">%</span> <span class="token operator">-</span> <span class="token number">24</span><span class="token unit">px</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment">/* Image encore plus haute sur grand écran */</span>
+  <span class="token selector"><span class="token class">.product-card__image</span></span> <span class="token punctuation">{</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">300</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment">/* Titre au maximum de lisibilité */</span>
+  <span class="token selector"><span class="token class">.product-card__title</span></span> <span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">22</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment">/* 
+  Effet au survol uniquement sur desktop
+  Car le survol n'existe pas sur tactile
+  */</span>
+  <span class="token selector"><span class="token class">.product-card</span><span class="token pseudo-class">:hover</span></span> <span class="token punctuation">{</span>
+    <span class="token comment">/* Ombre plus prononcée au survol */</span>
+    <span class="token property">box-shadow</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token number">4</span><span class="token unit">px</span> <span class="token number">12</span><span class="token unit">px</span> <span class="token color"><span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0.15</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* Légère élévation avec transformation */</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateY</span><span class="token punctuation">(</span><span class="token number">-4</span><span class="token unit">px</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token comment">/* Animation fluide de la transformation */</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> all <span class="token number">0.3</span><span class="token unit">s</span> ease<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 
+ÉTAPE 4 : Media Query pour l'orientation
+Utile pour les tablettes qui peuvent pivoter
+*/</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">orientation</span><span class="token punctuation">:</span> landscape<span class="token punctuation">)</span> <span class="token keyword keyword-and">and</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token number">1023</span><span class="token unit">px</span><span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token comment">/* 
+  En mode paysage sur tablette, on peut afficher 3 cartes
+  même si l'écran n'atteint pas 1024px de large
+  */</span>
+  <span class="token selector"><span class="token class">.product-card</span></span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">calc</span><span class="token punctuation">(</span><span class="token number">33.333</span><span class="token unit">%</span> <span class="token operator">-</span> <span class="token number">20</span><span class="token unit">px</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="pourquoi-cette-approche-">Pourquoi cette approche ? </h3>
+<p>Les media queries fonctionnent parfaitement quand vous voulez adapter <strong>l'ensemble de votre layout</strong> aux dimensions de l'écran. C'est l'outil <em>historique</em> du responsive design, fiable et universellement supporté.</p>
+<p><strong>Limites identifiées</strong><br>
+Si votre carte est placée dans une sidebar étroite sur desktop, elle gardera le style "desktop" (33.333% de largeur) même si son conteneur est petit.<br>
+La carte ne "voit" que la taille de l'écran, pas son contexte réel.</p>
+<hr>
+<h2 id="partie-2--les-container-queries---lapproche-moderne">Partie 2 : Les Container Queries - L'Approche Moderne </h2>
+<h3 id="le-principe-révolutionnaire-">Le Principe Révolutionnaire 🚀 </h3>
+<p>Les container queries permettent aux composants de s'adapter à <strong>leur propre espace disponible</strong>, indépendamment de la taille de l'écran.</p>
+<blockquote>
+<p>C'est le chaînon manquant du CSS moderne !</p>
+</blockquote>
+<h3 id="exemple-commenté---composant-vraiment-réutilisable">Exemple Commenté - Composant Vraiment Réutilisable </h3>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code><span class="token comment">/* 
+ÉTAPE 1 : Définir le conteneur
+C'est LA nouveauté : on déclare quel élément servira de référence
+*/</span>
+<span class="token selector"><span class="token class">.card-container</span></span> <span class="token punctuation">{</span>
+  <span class="token comment">/* 
+  container-type définit le type de surveillance
+  inline-size = surveiller la largeur du conteneur
+  (inline-size car on surveille l'axe horizontal)
+  */</span>
+  <span class="token property">container-type</span><span class="token punctuation">:</span> inline-size<span class="token punctuation">;</span>
+  
+  <span class="token comment">/* 
+  container-name donne un nom au conteneur
+  Permet de cibler spécifiquement ce conteneur dans les queries
+  Optionnel mais recommandé pour la clarté
+  */</span>
+  <span class="token property">container-name</span><span class="token punctuation">:</span> card-wrapper<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 
+ÉTAPE 2 : Styles de base du composant
+Ces styles s'appliquent TOUJOURS, quelle que soit la taille
+*/</span>
+<span class="token selector"><span class="token class">.adaptive-card</span></span> <span class="token punctuation">{</span>
+  <span class="token comment">/* Padding confortable */</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">16</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">/* Bordure et coins arrondis */</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token unit">px</span> solid <span class="token hexcode color">#ddd</span><span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">12</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">/* Couleur de fond */</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token color">white</span><span class="token punctuation">;</span>
+  
+  <span class="token comment">/* 
+  Par défaut, disposition verticale (colonne)
+  Image au-dessus, texte en dessous
+  */</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+  <span class="token property">gap</span><span class="token punctuation">:</span> <span class="token number">12</span><span class="token unit">px</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.adaptive-card__image</span></span> <span class="token punctuation">{</span>
+  <span class="token comment">/* Image responsive par défaut */</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span><span class="token unit">%</span><span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">180</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  <span class="token property">object-fit</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">8</span><span class="token unit">px</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.adaptive-card__title</span></span> <span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">16</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  <span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">600</span><span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">1.4</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.adaptive-card__description</span></span> <span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">14</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode color">#666</span><span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">1.6</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 
+ÉTAPE 3 : Container Query pour taille moyenne
+@container = "si le conteneur parent répond à cette condition"
+(min-width: 400px) = "si le conteneur fait au moins 400px"
+*/</span>
+<span class="token atrule"><span class="token rule">@container</span> card-wrapper <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> <span class="token number">400</span><span class="token unit">px</span><span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token comment">/* 
+  Quand le conteneur dépasse 400px, on passe en disposition horizontale
+  L'image à gauche, le contenu à droite
+  */</span>
+  <span class="token selector"><span class="token class">.adaptive-card</span></span> <span class="token punctuation">{</span>
+    <span class="token property">flex-direction</span><span class="token punctuation">:</span> row<span class="token punctuation">;</span>
+    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment">/* 
+  L'image occupe maintenant 40% de la largeur
+  Et non plus 100% comme en version verticale
+  */</span>
+  <span class="token selector"><span class="token class">.adaptive-card__image</span></span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">40</span><span class="token unit">%</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span><span class="token unit">px</span><span class="token punctuation">;</span>
+    <span class="token comment">/* 
+    flex-shrink: 0 empêche l'image de rétrécir
+    si le texte est long
+    */</span>
+    <span class="token property">flex-shrink</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment">/* Le contenu occupe l'espace restant */</span>
+  <span class="token selector"><span class="token class">.adaptive-card__content</span></span> <span class="token punctuation">{</span>
+    <span class="token property">flex</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment">/* Texte plus grand avec plus d'espace */</span>
+  <span class="token selector"><span class="token class">.adaptive-card__title</span></span> <span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">18</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token selector"><span class="token class">.adaptive-card__description</span></span> <span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">15</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 
+ÉTAPE 4 : Container Query pour grande taille
+Quand le conteneur dépasse 600px
+*/</span>
+<span class="token atrule"><span class="token rule">@container</span> card-wrapper <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> <span class="token number">600</span><span class="token unit">px</span><span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector"><span class="token class">.adaptive-card</span></span> <span class="token punctuation">{</span>
+    <span class="token comment">/* Padding plus généreux */</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">24</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment">/* Image encore plus grande */</span>
+  <span class="token selector"><span class="token class">.adaptive-card__image</span></span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">45</span><span class="token unit">%</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">250</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment">/* Typographie optimisée pour grand espace */</span>
+  <span class="token selector"><span class="token class">.adaptive-card__title</span></span> <span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">22</span><span class="token unit">px</span><span class="token punctuation">;</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">8</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token selector"><span class="token class">.adaptive-card__description</span></span> <span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">16</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token comment">/* 
+  On peut ajouter des éléments qui n'apparaissent
+  que quand il y a assez d'espace
+  */</span>
+  <span class="token selector"><span class="token class">.adaptive-card__metadata</span></span> <span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">gap</span><span class="token punctuation">:</span> <span class="token number">16</span><span class="token unit">px</span><span class="token punctuation">;</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">12</span><span class="token unit">px</span><span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">14</span><span class="token unit">px</span><span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode color">#888</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 
+ÉTAPE 5 : Combiner container queries et unités de conteneur
+cqw = Container Query Width (largeur du conteneur en %)
+1cqw = 1% de la largeur du conteneur
+*/</span>
+<span class="token atrule"><span class="token rule">@container</span> card-wrapper <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> <span class="token number">500</span><span class="token unit">px</span><span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector"><span class="token class">.adaptive-card__title</span></span> <span class="token punctuation">{</span>
+    <span class="token comment">/* 
+    La taille de police s'adapte fluidement
+    entre 18px et 24px selon la largeur du conteneur
+    clamp(min, préféré, max)
+    */</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token function">clamp</span><span class="token punctuation">(</span><span class="token number">18</span><span class="token unit">px</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token unit">cqw</span><span class="token punctuation">,</span> <span class="token number">24</span><span class="token unit">px</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="html-correspondant-pour-comprendre">HTML correspondant pour comprendre </h3>
+<pre data-role="codeBlock" data-info="html" class="language-html html"><code><span class="token comment">&lt;!-- 
+Exemple 1 : Dans une colonne principale large
+Le conteneur fait environ 800px sur desktop
+La carte utilisera le style @container (min-width: 600px)
+--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>main-content<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>card-container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>article</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>adaptive-card<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>product.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>adaptive-card__image<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Produit<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>adaptive-card__content<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>adaptive-card__title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Titre du produit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>adaptive-card__description<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Description détaillée...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>adaptive-card__metadata<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>Prix : 29€<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>En stock<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>article</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- 
+Exemple 2 : Dans une sidebar étroite
+Le conteneur fait environ 300px
+La carte utilisera le style de base (vertical)
+MÊME SI nous sommes sur un écran desktop de 1920px !
+--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>aside</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sidebar<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>card-container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>article</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>adaptive-card<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>product.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>adaptive-card__image<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Produit<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>adaptive-card__content<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>adaptive-card__title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Titre du produit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>adaptive-card__description<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Description...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>article</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>aside</span><span class="token punctuation">&gt;</span></span>
+</code></pre><hr>
+<h2 id="tableau-comparatif--quand-utiliser-quoi-">Tableau Comparatif : Quand Utiliser Quoi ? </h2>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>Media Queries</th>
+<th>Container Queries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Question posée</strong></td>
+<td>"Quelle taille fait l'écran ?"</td>
+<td>"Quelle taille fait mon conteneur ?"</td>
+</tr>
+<tr>
+<td><strong>Utilisation idéale</strong></td>
+<td>Layout global, grilles principales, navigation</td>
+<td>Composants réutilisables, widgets, cartes</td>
+</tr>
+<tr>
+<td><strong>Réutilisabilité</strong></td>
+<td>Faible (dépend du contexte écran)</td>
+<td>Élevée (s'adapte automatiquement)</td>
+</tr>
+<tr>
+<td><strong>Support navigateurs</strong></td>
+<td>Excellent (100%) ✅</td>
+<td>Bon (95%+ depuis 2023) ✅</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Excellent</td>
+<td>Excellent</td>
+</tr>
+<tr>
+<td><strong>Complexité</strong></td>
+<td>Simple à comprendre</td>
+<td>Nécessite de définir des conteneurs</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="cas-pratique--combinons-les-deux">Cas Pratique : Combinons les Deux </h2>
+<p>La vraie puissance vient de la <strong>combinaison</strong> des deux approches :</p>
+<pre data-role="codeBlock" data-info="css" class="language-css css"><code><span class="token comment">/* 
+STRATÉGIE HYBRIDE COMPLÈTE
+Utiliser les deux pour un résultat optimal
+*/</span>
+
+<span class="token comment">/* 1️⃣ Media Query pour le layout global */</span>
+<span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> <span class="token number">1024</span><span class="token unit">px</span><span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector"><span class="token class">.page-layout</span></span> <span class="token punctuation">{</span>
+    <span class="token comment">/* Grille à 2 colonnes sur desktop */</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+    <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token number">300</span><span class="token unit">px</span> <span class="token number">1</span><span class="token unit">fr</span><span class="token punctuation">;</span>
+    <span class="token property">gap</span><span class="token punctuation">:</span> <span class="token number">32</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token selector"><span class="token class">.sidebar</span></span> <span class="token punctuation">{</span>
+    <span class="token comment">/* Sidebar fixe de 300px */</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">300</span><span class="token unit">px</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token selector"><span class="token class">.main-content</span></span> <span class="token punctuation">{</span>
+    <span class="token comment">/* Contenu principal prend l'espace restant */</span>
+    <span class="token property">flex</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* 2️⃣ Container Query pour les composants */</span>
+<span class="token selector"><span class="token class">.card-container</span></span> <span class="token punctuation">{</span>
+  <span class="token property">container-type</span><span class="token punctuation">:</span> inline-size<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@container</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> <span class="token number">400</span><span class="token unit">px</span><span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token comment">/* 
+  Peu importe si cette carte est dans :
+  - La sidebar (300px) → reste vertical ❌
+  - Le contenu principal (700px) → passe horizontal ✅
+  Le composant décide selon SON espace !
+  */</span>
+  <span class="token selector"><span class="token class">.adaptive-card</span></span> <span class="token punctuation">{</span>
+    <span class="token property">flex-direction</span><span class="token punctuation">:</span> row<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<h2 id="exercice-progressif-pour-maîtriser">Exercice Progressif pour Maîtriser </h2>
+<h3 id="niveau-1️⃣--media-query-simple">Niveau 1️⃣ : Media Query Simple </h3>
+<p>Créez une grille de cartes qui passe de 1 colonne (mobile) à 2 (tablette) à 3 (desktop).</p>
+<h3 id="niveau-2️⃣--container-query-basique">Niveau 2️⃣ : Container Query Basique </h3>
+<p>Créez une carte qui passe de vertical à horizontal quand son conteneur dépasse 400px.</p>
+<h3 id="niveau-3️⃣--combinaison">Niveau 3️⃣ : Combinaison </h3>
+<p>Créez un dashboard avec une sidebar contenant des mini-cartes et un contenu principal avec des grandes cartes, où chaque type de carte s'adapte à son propre contexte.</p>
+<hr>
+<p>aller plus loin dans la compréhension du concept de <em>Progressive Enhancement</em> appliqué au responsive design.</p>
+<h3 id="progressive-enhancement-et-responsive-design--le-lien-intrinsèque">Progressive Enhancement et Responsive Design : Le Lien Intrinsèque </h3>
+<p>Dans le contexte du responsive design avec media queries et container queries, Progressive Enhancement se traduit par une approche Mobile-First structurée en couches.</p>
+<pre data-role="codeBlock" data-info="text" class="language-text text"><code>┌─────────────────────────────────────────┐
+│  COUCHE 3: Desktop Enhancement          │  ← Expérience optimale
+│  • Container queries                    │
+│  • Animations complexes                 │
+│  • Interactions avancées (hover)        │
+├─────────────────────────────────────────┤
+│  COUCHE 2: Tablette &amp; Medium Screens    │  ← Amélioration intermédiaire
+│  • Layout multi-colonnes                │
+│  • Media queries standard               │
+│  • Images optimisées                    │
+├─────────────────────────────────────────┤
+│  COUCHE 1: Mobile Base (FONDATION)      │  ← Expérience universelle
+│  • HTML sémantique                      │
+│  • CSS de base                          │
+│  • Contenu accessible                   │
+│  • Fonctionnement sans JavaScript       │
+└─────────────────────────────────────────┘
+</code></pre><hr>
+<h2 id="-points-clés-à-retenir">🌟 Points Clés à Retenir </h2>
+<p>✅ <strong>Media Queries</strong> = Pour les décisions de layout global basées sur l'écran, Viewport.<br>
+✅ <strong>Container Queries</strong> = Pour les composants autonomes qui s'adaptent à leur contexte (<em>@container</em>).<br>
+✅ <strong>Mobile First</strong> = Commencer par les petits écrans puis cibler les plus grandes dimmension d'écran.<br>
+✅ <strong>Combinaison</strong> = La vraie puissance vient d'utiliser les deux ensemble.<br>
+✅ <strong>Container-type</strong> = Toujours déclarer le conteneur parent avant d'utiliser <em>@container</em>.</p>
+<blockquote>
+<p>Avec ces deux outils complémentaires, vous pouvez créer des interfaces véritablement adaptatives et des composants réellement réutilisables !</p>
+</blockquote>
+<p><em>Happy Coding !</em></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

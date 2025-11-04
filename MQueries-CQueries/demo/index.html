@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+ <title>Workaround the Media Queries</title>
+ <meta charset="utf-8">
+ <meta name="author" content="Alsacreations">
+
+ <style>
+  /*
+ Setup variables
+*/
+  :root {
+   --primary-color: var(--primary-color);
+  }
+
+  /* Ci-dessous : CSS media queries */
+
+  /**
+  1: max-width 
+*/
+  @media screen and (max-width: 640px) {
+   .small {
+    background: var(--primary-color);
+    color: #fff;
+   }
+
+   .precisions span.regle1 {
+    display: block;
+   }
+  }
+
+
+  /**
+  2: min-width 
+*/
+  @media screen and (min-width: 800px) {
+   .medium {
+    background: var(--primary-color);
+    color: #fff;
+   }
+
+   .precisions span.regle2 {
+    display: block;
+   }
+  }
+
+
+  /** 
+ 3: min-width + max-width 
+*/
+  @media screen and (min-width: 1024px) and (max-width: 1280px) {
+   .wide {
+    background: var(--primary-color);
+    color: #fff;
+   }
+
+   .precisions span.regle3 {
+    display: block;
+   }
+  }
+
+
+  /** 
+ 4: max device width 
+*/
+  @media screen and (max-device-width: 480px) {
+   .maxdevice {
+    background: var(--primary-color);
+    color: #fff;
+   }
+
+   .precisions span.regle4 {
+    display: block;
+   }
+  }
+
+
+  /** 
+ 5: orientation:portrait 
+*/
+  @media screen and (orientation:portrait) {
+   .portrait {
+    background: var(--primary-color);
+    color: #fff;
+   }
+
+   .precisions span.regle5 {
+    display: block;
+   }
+  }
+
+
+  /** 
+ 6: orientation:paysage 
+*/
+  @media screen and (orientation:landscape) {
+   .landscape {
+    background: var(--primary-color);
+    color: #fff;
+   }
+
+   .precisions span.regle6 {
+    display: block;
+   }
+  }
+
+  /** 
+ **7: Container Queries 
+*/
+
+  @container example (max-width: 100px) {
+   .text {
+    display: none;
+   }
+
+   .text__2xs {
+    display: inline;
+   }
+  }
+
+  @container example (min-width: 101px) {
+   .text {
+    display: none;
+   }
+
+   .text__xs {
+    display: inline;
+   }
+  }
+
+  @container example (min-width: 361px) and (max-width: 499px) {
+   .text {
+    display: none;
+   }
+
+   .text__sm {
+    display: inline;
+   }
+  }
+
+  @container example (min-width: 500px) and (max-width: 699px) {
+   .text {
+    display: none;
+   }
+
+   .text__md {
+    display: inline;
+   }
+  }
+
+  @container example (min-width: 700px) and (max-width: 899px) {
+   .text {
+    display: none;
+   }
+
+   .text__lg {
+    display: inline;
+   }
+  }
+
+  @container example (min-width: 900px) and (max-width: 1099px) {
+   .text {
+    display: none;
+   }
+
+   .text__xl {
+    display: inline;
+   }
+  }
+
+  @container example (min-width: 1100px) {
+   .text {
+    display: none;
+   }
+
+   .text__2xl {
+    display: inline;
+   }
+  }
+
+  .container {
+   border: 1px dashed gray;
+   resize: horizontal;
+   overflow: scroll;
+   width: 350px;
+   height: 100px;
+   container: example / inline-size;
+  }
+
+.card__container {
+  container-type: inline-size; 
+  padding: 4rem;
+}
+
+.card {
+  padding: 1rem;
+  background-color: #f0f0f0;
+}
+
+@container (min-width: 640px) {
+  .card {
+    background-color: #007bff; 
+    color: #fff;
+  }
+}
+
+
+
+  /** 
+ Styles généraux 
+*/
+  @layer base {
+   body {
+    font-family: Sans-serif;
+    font-size: 100%;
+    background: #F1F1F1;
+   }
+
+   a {
+    color: #369;
+   }
+
+   div,
+   p,
+   h1,
+   h2 {
+    padding: 0.5em 1em;
+    margin: 1em;
+    color: #666;
+    line-height: 150%;
+   }
+
+   p {
+    color: #656565;
+    background: #eee9e9;
+   }
+
+   .precisions span {
+    color: #cd023b;
+    display: none;
+    font-weight: bold;
+   }
+
+   h1,
+   h2 {
+    font-size: 2.5rem;
+    padding: 0;
+    color: #ccc;
+    text-shadow: 1px 1px 1px #aaa;
+    margin-bottom: 0;
+   }
+
+   h2 {
+    font-size: 2rem;
+    text-shadow: none;
+   }
+  }
+ </style>
+</head>
+
+<body>
+ <h1 style="text-align: center">Démo Queries</h1>
+ <section>
+  <h2> Media Queries</h2>
+  <div class="precisions">Règle(s) appliquée(s) :
+   <span class="regle1">@media screen and (max-width: 640px)</span>
+   <span class="regle2">@media screen and (min-width: 800px)</span>
+   <span class="regle3">@media screen and (min-width: 1024px) and (max-width: 1280px)</span>
+   <span class="regle4">@media screen and (max-device-width: 480px)</span>
+   <span class="regle5">@media screen and (orientation:portrait)</span>
+   <span class="regle6">@media screen and (orientation:landscape)</span>
+  </div>
+
+  <p class="small">La page est affichée avec une largeur &lt; 640px</p>
+  <p class="medium">La page est affichée avec une largeur &gt; 800px</p>
+  <p class="wide">La page est affichée avec une largeur &gt; 1024px et &lt; 1280px</p>
+  <p class="maxdevice">La page est affichée sur un périphérique de maximum 480px (ex: iPhone)</p>
+  <p class="portrait">La page est affichée en portrait</p>
+  <p class="landscape">La page est affichée en paysage</p>
+
+
+ </section>
+
+ <section>
+
+  <h2>Container Queries</h2>
+  
+  <div class="card__container">
+   <div class="card">
+    <h3>Title</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+   </div>
+  </div>
+
+  <hr>
+  <div class="container">
+   <div class="example">
+    <p class="text text__2xs">La largeur de mon conteneur est inférieure à 101 pixels.</p>
+    <p class="text text__xs">Mon conteneur mesure entre 101 px et 360 px.</p>
+    <p class="text text__sm">Mon conteneur mesure entre 361 px et 499 px.</p>
+    <p class="text text__md">Mon conteneur mesure entre 500px et 699px</p>
+    <p class="text text__lg">Mon conteneur mesure entre 700px et 899px</p>
+    <p class="text text__xl">Mon conteneur mesure entre 900px et 1099px</p>
+    <p class="text text__2xl">
+     My container is wider than 1099px
+    </p>
+   </div>
+ </section>
+
+
+</body>
+
+</html>
